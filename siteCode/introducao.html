@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seja nosso cliente</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <h1>Evolut<span>Code</span></h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#" class="active" data-page="home">Home</a></li>
+                <li><a href="#" data-page="about">Sobre</a></li>
+                <li><a href="#" data-page="contact">Contato</a></li>
+            </ul>
+        </nav>
+        <div class="menu-toggle">
+            <i class="fas fa-bars"></i>
+        </div>
+    </header>
+
+    <main>
+        <!-- Página Home -->
+        <section id="home-page" class="page active">
+            <div class="hero">
+                <h2>Bem-vindo ao Nosso Site</h2>
+                <p>Descubra nossas incríveis soluções para seu negócio</p>
+                <button class="cta-button">Saiba Mais</button>
+            </div>
+
+            <div class="features">
+                <div class="feature-card">
+                    <img src="https://images.unsplash.com/photo-1499750310107-5fef28a66643?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="Design Moderno">
+                    <h3>Design Moderno</h3>
+                    <p>Interface limpa e intuitiva para melhor experiência do usuário.</p>
+                </div>
+                <div class="feature-card">
+                    <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="Responsividade">
+                    <h3>Totalmente Responsivo</h3>
+                    <p>Funciona perfeitamente em qualquer dispositivo.</p>
+                </div>
+                <div class="feature-card">
+                    <img src="https://images.unsplash.com/photo-1547658719-da2b51169166?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="Alta Performance">
+                    <h3>Alta Performance</h3>
+                    <p>Carregamento rápido e otimizado para SEO.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Página Sobre -->
+        <section id="about-page" class="page">
+            <h2>Sobre Nós</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>Somos uma equipe apaixonada por criar soluções digitais inovadoras que fazem a diferença.</p>
+                    <p>Fundada em 2023, nossa empresa já ajudou mais de 100 clientes a alcançarem seus objetivos online.</p>
+                    <p>Nossa missão é simplificar a tecnologia para que você possa focar no que realmente importa: seu negócio.</p>
+                </div>
+                <div class="about-image">
+                    <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="Nossa Equipe">
+                </div>
+            </div>
+
+            <div class="team">
+                <h3>Conheça Nosso Time</h3>
+                <div class="team-members">
+                    <div class="member">
+                        <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="João Silva">
+                        <h4>Wesley Barros</h4>
+                        <p>CEO & Fundador</p>
+                    </div>
+                    <div class="member">
+                        <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="Maria Souza">
+                        <h4>Maria Miriam</h4>
+                        <p>Designer Chefe</p>
+                    </div>
+                    <div class="member">
+                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="Carlos Oliveira">
+                        <h4>Antonio Mathyas</h4>
+                        <p>Desenvolvedor Sênior</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Página Contato -->
+        <section id="contact-page" class="page">
+            <h2>Entre em Contato</h2>
+            <div class="contact-container">
+                <div class="contact-info">
+                    <h3>Informações de Contato</h3>
+                    <p><i class="fas fa-map-marker-alt"></i> Rua do papoco, 157 - Beberibe, CE</p>
+                    <p><i class="fas fa-phone"></i> (85) 99929-5091</p>
+                    <p><i class="fas fa-envelope"></i> contato@Evolutcode.com</p>
+                    
+                    <div class="social-media">
+                        <h3>Redes Sociais</h3>
+                        <div class="social-icons">
+                            <a href="#"><i class="fab fa-facebook"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                            <a href="#"><i class="fab fa-linkedin"></i></a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="contact-form">
+                    <h3>Envie uma Mensagem</h3>
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <input type="text" id="name" placeholder="Seu Nome" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" id="email" placeholder="Seu Email" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" id="subject" placeholder="Assunto">
+                        </div>
+                        <div class="form-group">
+                            <textarea id="message" rows="5" placeholder="Sua Mensagem" required></textarea>
+                        </div>
+                        <button type="submit" class="submit-btn">Enviar Mensagem</button>
+                    </form>
+                </div>
+            </div>
+            
+            <div class="map">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3657.0754267452926!2d-46.65342658440769!3d-23.565734367638057!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce59c8da0aa315%3A0xd59f9431f2c9776a!2sAv.%20Paulista%2C%20S%C3%A3o%20Paulo%20-%20SP!5e0!3m2!1spt-BR!2sbr!4v1623868123456!5m2!1spt-BR!2sbr" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Sobre Nós</h3>
+                <p>Criamos soluções digitais inovadoras para ajudar seu negócio a crescer na era digital.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Links Rápidos</h3>
+                <ul>
+                    <li><a href="#" data-page="home">Home</a></li>
+                    <li><a href="#" data-page="about">Sobre</a></li>
+                    <li><a href="#" data-page="contact">Contato</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Newsletter</h3>
+                <form id="newsletterForm">
+                    <input type="email" placeholder="Seu Email" required>
+                    <button type="submit">Assinar</button>
+                </form>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2023 SiteModerno. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
