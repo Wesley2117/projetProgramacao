@@ -36,45 +36,37 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
     
-    // Validação do Formulário de Contato
-    const contactForm = document.getElementById('contactForm');
+    // Galeria de imagens - Lightbox
+    const galleryItems = document.querySelectorAll('.gallery-item');
+    const lightbox = document.createElement('div');
+    lightbox.id = 'lightbox';
+    document.body.appendChild(lightbox);
     
-    if (contactForm) {
-        contactForm.addEventListener('submit', function(e) {
-            e.preventDefault();
+    galleryItems.forEach(item => {
+        item.addEventListener('click', function() {
+            lightbox.classList.add('active');
+            const img = document.createElement('img');
+            img.src = this.querySelector('img').src;
+            img.alt = this.querySelector('.gallery-caption').textContent;
             
-            // Simulação de envio
-            const name = document.getElementById('name').value;
-            const email = document.getElementById('email').value;
-            const message = document.getElementById('message').value;
-            
-            // Validação simples
-            if (name && email && message) {
-                alert(`Obrigado, ${name}! Sua mensagem foi enviada com sucesso. Entraremos em contato em breve.`);
-                contactForm.reset();
-            } else {
-                alert('Por favor, preencha todos os campos obrigatórios.');
+            while (lightbox.firstChild) {
+                lightbox.removeChild(lightbox.firstChild);
             }
-        });
-    }
-    
-    // Validação do Formulário de Newsletter
-    const newsletterForm = document.getElementById('newsletterForm');
-    
-    if (newsletterForm) {
-        newsletterForm.addEventListener('submit', function(e) {
-            e.preventDefault();
             
-            const email = this.querySelector('input[type="email"]').value;
+            lightbox.appendChild(img);
             
-            if (email) {
-                alert(`Obrigado por assinar nossa newsletter! Um e-mail de confirmação foi enviado para ${email}.`);
-                this.reset();
-            } else {
-                alert('Por favor, insira um endereço de e-mail válido.');
-            }
+            // Adiciona legenda
+            const caption = document.createElement('div');
+            caption.className = 'lightbox-caption';
+            caption.textContent = this.querySelector('.gallery-caption').textContent;
+            lightbox.appendChild(caption);
         });
-    }
+    });
+    
+    lightbox.addEventListener('click', function(e) {
+        if (e.target !== e.currentTarget) return;
+        lightbox.classList.remove('active');
+    });
     
     // Efeito de rolagem suave para links internos
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
@@ -96,7 +88,7 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Animação ao rolar a página
     function animateOnScroll() {
-        const elements = document.querySelectorAll('.feature-card, .member, .form-group');
+        const elements = document.querySelectorAll('.house-card, .character-card, .season, .highlight-card, .news-item');
         
         elements.forEach(element => {
             const elementPosition = element.getBoundingClientRect().top;
@@ -110,16 +102,10 @@ document.addEventListener('DOMContentLoaded', function() {
     }
     
     // Configuração inicial para elementos animados
-    document.querySelectorAll('.feature-card, .member').forEach(element => {
+    document.querySelectorAll('.house-card, .character-card, .season, .highlight-card, .news-item').forEach(element => {
         element.style.opacity = '0';
         element.style.transform = 'translateY(20px)';
         element.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
-    });
-    
-    document.querySelectorAll('.form-group').forEach((element, index) => {
-        element.style.opacity = '0';
-        element.style.transform = 'translateX(' + (index % 2 === 0 ? '-' : '') + '20px)';
-        element.style.transition = 'opacity 0.5s ease ' + (index * 0.1) + 's, transform 0.5s ease ' + (index * 0.1) + 's';
     });
     
     // Dispara a animação quando a página carrega
